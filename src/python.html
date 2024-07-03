@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Getting Started with Python for CS 335</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style type="text/css">
+a.sourceLine { display: inline-block; line-height: 1.25; }
+a.sourceLine { pointer-events: none; color: inherit; text-decoration: inherit; }
+a.sourceLine:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+a.sourceLine { text-indent: -1em; padding-left: 1em; }
+}
+pre.numberSource a.sourceLine
+  { position: relative; left: -4em; }
+pre.numberSource a.sourceLine::before
+  { content: attr(title);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; pointer-events: all; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  }
+@media screen {
+a.sourceLine::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="include/style.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Getting Started with Python for CS 335</h1>
+</header>
+<nav id="TOC">
+<ul>
+<li><a href="#install-anaconda-on-your-computer">Install Anaconda on your computer</a></li>
+<li><a href="#running-python-after-installation">Running Python after installation</a></li>
+<li><a href="#command-line-help">Command-line help</a></li>
+<li><a href="#other-ways-of-running-python">Other ways of running Python</a><ul>
+<li><a href="#ipython-jupyter-notbooks">iPython / Jupyter notbooks</a></li>
+<li><a href="#interactive-command-line-python">Interactive command-line Python</a></li>
+<li><a href="#ipython">iPython</a></li>
+<li><a href="#ides">IDEs</a><ul>
+<li><a href="#microsoft-visual-studio-code">Microsoft Visual Studio Code</a></li>
+<li><a href="#pycharm">PyCharm</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="install-anaconda-on-your-computer">Install Anaconda on your computer</h1>
+<p>Download <strong>Anacaonda version 2018.12 with Python version 3.7</strong> for your platform (Windows / Mac/ Linux) <a href="https://www.anaconda.com/download">here</a>. Follow the installation instructions.</p>
+<h1 id="running-python-after-installation">Running Python after installation</h1>
+<p>Python is typically invoked from the command-line like this:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb1-1" title="1">$ <span class="ex">python</span> foo.py  # foo.py is a file containing a Python program</a></code></pre></div>
+<p>However, you need to make sure that you invoke <strong>the correct version of Python</strong>. The CS lab computers have multiple versions of Python installed—your computer probably does too.</p>
+<p>One way to ensure you use the correct version is to specify the full path:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb2-1" title="1">$ <span class="ex">~/anaconda3/bin/python</span> foo.py   # Possible install location</a>
+<a class="sourceLine" id="cb2-2" title="2">$ <span class="ex">/anaconda3/bin/python</span> foo.py    # Another possible install location</a></code></pre></div>
+<p>To avoid typing the full path every time, you can set your system <code>PATH</code> variable so that the directory of the desired <code>python</code> appears first on your path. For example, in the <code>bash</code> shell:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb3-1" title="1">$ <span class="bu">export</span> <span class="va">PATH=</span><span class="st">&quot;/anaconda3/bin:</span><span class="va">$PATH</span><span class="st">&quot;</span></a>
+<a class="sourceLine" id="cb3-2" title="2">$ <span class="ex">python</span> foo.py   # Finds python in /anaconda3/bin</a></code></pre></div>
+<p>On Mac/Linux systems, you can add the <code>export</code> command to your <code>.bash_profile</code> file so it runs automatically when you start a terminal session. <strong>Note</strong>: the Anaconda installer offers an option to do this at install time, in which case you may not need to do anything.</p>
+<p>You can check that you have set the <code>PATH</code> correctly by seeing which <code>python</code> the system finds:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb4-1" title="1">$ <span class="fu">which</span> python </a>
+<a class="sourceLine" id="cb4-2" title="2"><span class="ex">/Users/sheldon/anaconda2/bin/python</span></a></code></pre></div>
+<h1 id="command-line-help">Command-line help</h1>
+<p>If you are new to the command-line:</p>
+<ul>
+<li>Take a look at the resources on the <a href="https://sites.google.com/a/mtholyoke.edu/the-cs-help-site/home/command-line-resources">CS help site</a></li>
+<li>Luke Jaeger runs command-line workshops from time to time—I encourage you to attend them.</li>
+</ul>
+<h1 id="other-ways-of-running-python">Other ways of running Python</h1>
+<h2 id="ipython-jupyter-notbooks">iPython / Jupyter notbooks</h2>
+<p>A Jupyter notebook lets you write and execute Python code interactively in your web browser. It is a powerful way to interact with code and also to mix Python code with beatifully rendered text and math for the purposes of exposition. (Jupyter notebooks were formerly called iPython notebooks.) You can start Jupyter like this:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb5-1" title="1">$ <span class="ex">jupyter</span> notebook</a></code></pre></div>
+<p>This will launch the Jupyter App and open a browser window on the computer. In the browser you can create a new notebook to interactively write and execute Python code. It looks like this:</p>
+<p><img src="images/notebook-2.png" /></p>
+<p>Read <a href="http://cs231n.github.io/ipython-tutorial/">this tutorial</a> for more information on running Jupyter notebooks.</p>
+<h2 id="interactive-command-line-python">Interactive command-line Python</h2>
+<p>Python can be launched with no arguments:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb6-1" title="1">$ <span class="ex">python</span> </a></code></pre></div>
+<p>This launches an interactive session where you can type commands that execute interactively, similar to R or MATLAB:</p>
+<pre><code>Python 3.7.1 (default, Dec 14 2018, 13:28:58)
+[Clang 4.0.1 (tags/RELEASE_401/final)] :: Anaconda, Inc. on darwin
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; x = 1
+&gt;&gt;&gt; print(x)
+1
+&gt;&gt;&gt; y = x
+&gt;&gt;&gt; x = x+1
+&gt;&gt;&gt; print(y)
+1</code></pre>
+<p>This mode can be very useful.</p>
+<h2 id="ipython">iPython</h2>
+<p>For interactive sessions, the program <code>ipython</code> (“interactive Python”) may offer advantages. It is invoked the same way:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><a class="sourceLine" id="cb8-1" title="1">$ <span class="ex">ipython</span></a></code></pre></div>
+<p>The iPython interactive session looks a bit different, and provides additional capabilities:</p>
+<pre><code>Python 3.7.1 (default, Dec 14 2018, 13:28:58)
+Type &#39;copyright&#39;, &#39;credits&#39; or &#39;license&#39; for more information
+IPython 7.2.0 -- An enhanced Interactive Python. Type &#39;?&#39; for help.
+
+In [1]: x = 1
+
+In [2]: print(x)
+1
+
+In [3]: x = x+1
+
+In [4]: print(x)
+2</code></pre>
+<h2 id="ides">IDEs</h2>
+<h3 id="microsoft-visual-studio-code">Microsoft Visual Studio Code</h3>
+<p>Anaconda now includes the option to install Microsoft Visual Studio Code as part of the installation. This is a code editor and IDE that is supposed to work well with Python. Since it ships with Anaconda it is likely to “play nicely” with anaconda style Python programming You may want to try it.</p>
+<h3 id="pycharm">PyCharm</h3>
+<p>PyCharm is a cross-platform IDE for Python with most popular programming features. Anaconda is a Pyhton installation with many useful Python packages. Both are free and easy to install. You can choose the OS you are familiar with.</p>
+<p>Students can choose from two free versions of PyCharm: <a href="https://www.jetbrains.com/pycharm/download/">PyCharm Community</a> or <a href="https://www.jetbrains.com/pycharm-edu/download/">PyCharm Edu</a>.</p>
+<p>One significant advantage of an IDE is debugging support.</p>
+<!-- ###Getting Started -->
+<!-- Download and install PyCharm.  -->
+<!-- ####Using Anaconda with PyCharms  -->
+<!-- To create a new Anaconda environment. -->
+<!-- 1. Open PyCharm -->
+<!-- 2. Click on PyCharm (in the top bar) -> Preferences -> Project Interpreter.  -->
+<!-- 3. Select the python interpreter from your Anaconda distribution in -->
+<!--    the dropdown list. -->
+<!-- <\!-- 3. Click on the button next to the dropdown menu and select "create a -\-> -->
+<!-- <\!--    new Conda environment". Make sure the environment is set to Python -\-> -->
+<!-- <\!--    2.7! There's more detailed info on creating a new conda environment -\-> -->
+<!-- <\!--    [here](https://www.jetbrains.com/help/pycharm/2016.2/conda-support-creating-conda-environment.html). -\-> -->
+<!-- ### Jupyter Notebooks in PyCharms -->
+<!-- Note that you might need to have Jupyter notebooks running in the terminal to be able to run code in the notebook.  -->
+<!-- [This](https://www.jetbrains.com/help/pycharm/2016.1/tutorial-using-ipython-jupyter-notebook-with-pycharm.html) is a great step-by-step guide for working with notebooks. -->
+</body>
+</html>
